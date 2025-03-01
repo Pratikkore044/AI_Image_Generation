@@ -45,17 +45,41 @@ opacity:1;
 }
 `;
 const Prompt = styled.div`
-font-weight:400;
-font-size:15px;
-color:${({ theme }) => theme.white};
+  font-weight: 400;
+  font-size: 15px;
+  color: ${({ theme }) => theme.white};
+  text-align: center;
+  word-break: break-word;
+  padding: 4px;
+  
+  @media (max-width: 600px) {
+    font-size: 9px;
+    text-align: start;
+    line-height: 1.2;
+    padding: 0.5px 0.5px 0px;
+  }
 `;
+
 const Author = styled.div`
-font-weight:400;
-font-size:15px;
-display:flex;
-gap:8px;
-align-items:center;
-color:${({ theme }) => theme.white};`;
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: ${({ theme }) => theme.white};
+  width: 100%;
+  justify-content: space-between;
+  padding: 4px;
+
+  @media (max-width: 600px) {
+    font-size: 9px;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0px 0.5px 0.5px;
+  }
+`;
+
+
 
 const ImageCard = ({ item }) => {
   return (
@@ -72,7 +96,7 @@ const ImageCard = ({ item }) => {
           justifyContent: "space-between"
         }}>
           <Author>
-            <Avatar sx={{ width: "32px", height: "32px" }}>
+            <Avatar sx={{ width: "22px", height: "22px" }}>
               {item?.name[0]}
             </Avatar>
             {item?.name}

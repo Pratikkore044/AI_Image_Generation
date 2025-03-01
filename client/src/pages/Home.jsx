@@ -16,7 +16,7 @@ flex-direction:column;
 align-items:center;
 gap:20px;
 @media (max-width:768px) {
-padding:6px 10px;
+padding: 6px 10px;
 }
 `;
 
